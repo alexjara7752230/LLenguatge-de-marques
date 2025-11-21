@@ -1,0 +1,43 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    padding: 2em;
+    text-align: center;
+}
+
+h1{
+    color: black;
+}
+
+legend{
+    font-size: large;
+    font-weight: bold;
+    color: brown;
+}
+
+input{
+    margin: 1em;
+    padding: 0.5em;
+    font-size: 0.8em;
+    border-radius: 1em;
+}
+
+button{
+    padding: 0.5em;
+    font-size: 1em;
+    margin: 0.5em;
+    width: 10%;
+    border-radius: 1em;
+    border: none;
+    color: forestgreen;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+button:hover{
+    background: aqua;
+    color: rebeccapurple;
+}
