@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estils.css">
-    <title>Encuesta de satisfacción </title>
+    <title>Encuesta de satisfacción</title>
 </head>
 
 <body>
@@ -13,175 +13,88 @@
         <h1>Encuesta de satisfacción</h1>
     </header>
 
-    <p>Esta encuesta es confidencial y no te tomará más de 2 minutos. Queremos saber como ha sido tu experiencia !!!</p>
+    <p>Esta encuesta es confidencial y no te tomará más de 2 minutos. Queremos saber cómo ha sido tu experiencia!</p>
 
-    <fieldset>
-        <legend>Datos personales:</legend>
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre aquí">
+    <form action="#" method="post">
+        <!-- Datos personales -->
+        <fieldset>
+            <legend>Datos personales</legend>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Tu email aquí">
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí" aria-label="Nombre" required>
 
-        <label for="telefono">Teléfono</label>
-        <input type="tel" name="telefono" id="telefono" placeholder="+34 223 07 75 26">
+            <input type="email" id="email" name="email" placeholder="Tu email aquí" aria-label="Email" required>
 
-        <label for="num_pedido">Número de pedido:</label>
-        <input type="number" name="num_pedido" id="num_pedido" placeholder="90218">
-    </fieldset>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 223 07 75 26" aria-label="Teléfono">
 
-    <fieldset>
-        <legend>Valoración sobre el prodcuto:</legend>
-        <label for="Grado_de_satisfacción"> Grado de satisfacción:</label>
-        <select name="grado_satisfacion" id="Grado_de_satisfacción">
-            <option value="">Seleccion una opción</option>
-            <option value="Muy satisfecho">Muy satisfecho</option>
-            <option value="Satisfecho">Satisfecho</option>
-            <option value="Neutral">Neutral</option>
-            <option value="Insatisfecho">Insatisfecho</option>
-            <option value="Muy Insatisfecho">Muy Insatisfecho</option>
-        </select>
+            <input type="number" id="pedido_personal" name="pedido_personal" placeholder="Número de pedido" aria-label="Número de pedido personal" required>
+        </fieldset>
 
-        <label for="comentarios1">Tus opiniones:</label>
-        <textarea name="comentarios" id="comentarios1" cols="40" rows="10"
-            placeholder="Cúentanos tus opiniones sobre el pedido"></textarea>
-    </fieldset>
+        <!-- Valoración sobre el producto -->
+        <fieldset>
+            <legend>Valoración sobre el producto</legend>
 
-    <fieldset>
-        <legend>Valoración sobre el envio del prodcuto</legend>
+            <select id="grado_satisfaccion" name="grado_satisfaccion" aria-label="Grado de satisfacción" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Muy satisfecho">Muy satisfecho</option>
+                <option value="Satisfecho">Satisfecho</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Insatisfecho">Insatisfecho</option>
+                <option value="Muy insatisfecho">Muy insatisfecho</option>
+            </select>
 
-        <label for="num_pedido">Número de pedido:</label>
-        <input type="number" name="num_pedido" placeholder="09144">
+            <textarea id="comentarios_producto" name="comentarios_producto" cols="40" rows="5"
+                placeholder="Cuéntanos tus opiniones sobre el pedido" aria-label="Comentarios sobre el producto"></textarea>
+        </fieldset>
 
-        <label for="fecha">Selecciona la fecha del pedido:</label>
-        <input type="date" id="fecha" name="fecha">
+        <!-- Valoración sobre el envío -->
+        <fieldset>
+            <legend>Valoración sobre el envío del producto</legend>
 
-        <label for="comentarios2">Tus opiniones:</label>
-        <textarea name="comentarios" id="comentarios2" cols="40" rows="10"
-            placeholder="Cúentanos tus opiniones sobre el envio del pedido"></textarea>
-    </fieldset>
+            <input type="number" id="pedido_envio" name="pedido_envio" placeholder="Número de pedido" aria-label="Número de pedido envío" required>
 
-    <fieldset>
-        <legend>Valoración general del servicio</legend>
+            <input type="date" id="fecha_envio" name="fecha_envio" aria-label="Fecha del pedido" required>
 
-        <p>¿Cómo valorarías tu experiencia general?</p>
+            <textarea id="comentarios_envio" name="comentarios_envio" cols="40" rows="5"
+                placeholder="Cuéntanos tus opiniones sobre el envío del pedido" aria-label="Comentarios sobre el envío"></textarea>
+        </fieldset>
 
-        <label for="valoracion0">0</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion0" value="0">
+        <!-- Valoración general del servicio -->
+        <fieldset>
+            <legend>Valoración general del servicio</legend>
 
-        <label for="valoracion0">1</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion1" value="1">
+            <p>¿Cómo valorarías tu experiencia general?</p>
+            <div>
+                <input type="radio" id="experiencia0" name="valoracion_experiencia" value="0" aria-label="Experiencia 0">
+                <input type="radio" id="experiencia1" name="valoracion_experiencia" value="1" aria-label="Experiencia 1">
+                <input type="radio" id="experiencia2" name="valoracion_experiencia" value="2" aria-label="Experiencia 2">
+                <input type="radio" id="experiencia3" name="valoracion_experiencia" value="3" aria-label="Experiencia 3">
+                <input type="radio" id="experiencia4" name="valoracion_experiencia" value="4" aria-label="Experiencia 4">
+                <input type="radio" id="experiencia5" name="valoracion_experiencia" value="5" aria-label="Experiencia 5">
+            </div>
 
-        <label for="valoracion0">2</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion2" value="2">
+            <p>¿Cómo calificarías la atención al cliente?</p>
+            <div>
+                <input type="radio" id="atencion0" name="valoracion_atencion" value="0" aria-label="Atención 0">
+                <input type="radio" id="atencion1" name="valoracion_atencion" value="1" aria-label="Atención 1">
+                <input type="radio" id="atencion2" name="valoracion_atencion" value="2" aria-label="Atención 2">
+                <input type="radio" id="atencion3" name="valoracion_atencion" value="3" aria-label="Atención 3">
+                <input type="radio" id="atencion4" name="valoracion_atencion" value="4" aria-label="Atención 4">
+                <input type="radio" id="atencion5" name="valoracion_atencion" value="5" aria-label="Atención 5">
+            </div>
 
-        <label for="valoracion0">3</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion3" value="3">
+            <p>¿Cómo valorarías la facilidad de uso de la plataforma?</p>
+            <div>
+                <input type="radio" id="facilidad0" name="valoracion_facilidad" value="0" aria-label="Facilidad 0">
+                <input type="radio" id="facilidad1" name="valoracion_facilidad" value="1" aria-label="Facilidad 1">
+                <input type="radio" id="facilidad2" name="valoracion_facilidad" value="2" aria-label="Facilidad 2">
+                <input type="radio" id="facilidad3" name="valoracion_facilidad" value="3" aria-label="Facilidad 3">
+                <input type="radio" id="facilidad4" name="valoracion_facilidad" value="4" aria-label="Facilidad 4">
+                <input type="radio" id="facilidad5" name="valoracion_facilidad" value="5" aria-label="Facilidad 5">
+            </div>
+        </fieldset>
 
-        <label for="valoracion0">4</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion4" value="4">
-
-        <label for="valoracion0">5</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion5" value="5">
-
-        <label for="valoracion0">6</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion6" value="6">
-
-        <label for="valoracion0">7</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion7" value="7">
-
-        <label for="valoracion0">8</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion8" value="8">
-
-        <label for="valoracion0">9</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion9" value="9">
-
-        <label for="valoracion0">10</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion10" value="10">
-
-
-        <p>¿Cómo calificarías la atención al cliente?</p>
-
-        <label for="valoracion0">11</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion00" value="11">
-
-        <label for="valoracion0">12</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion01" value="12">
-
-        <label for="valoracion0">13</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion02" value="13">
-
-        <label for="valoracion0">14</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion03" value="14">
-
-        <label for="valoracion0">15</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion04" value="15">
-
-        <label for="valoracion0">16</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion05" value="16">
-
-        <label for="valoracion0">17</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion06" value="17">
-
-        <label for="valoracion0">18</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion07" value="18">
-
-        <label for="valoracion0">19</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion08" value="19">
-
-        <label for="valoracion0">20</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion09" value="20">
-
-        <label for="valoracion0">21</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion010" value="21">
-
-
-        <p>¿Cómo valorarías la facilidad de uso de la plataforma?</p>
-
-        <label for="valoracion0">22</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion000" value="0">
-
-        <label for="valoracion0">23</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion001" value="0">
-
-        <label for="valoracion0">24</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion002" value="0">
-
-        <label for="valoracion0">25</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion003" value="0">
-
-        <label for="valoracion0">26</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion004" value="0">
-
-        <label for="valoracion0">27</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion005" value="0">
-
-        <label for="valoracion0">28</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion006" value="0">
-
-        <label for="valoracion0">29</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion007" value="0">
-
-        <label for="valoracion0">30</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion008" value="0">
-
-        <label for="valoracion0">31</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion009" value="0">
-
-        <label for="valoracion0">32</label>
-        <input type="checkbox" name="valoracion[]" id="valoracion100" value="0">
-
-    </fieldset>
-
-    <button>Enviar</button>
-
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 
-
 </html>
-
-
-
-
-
-
