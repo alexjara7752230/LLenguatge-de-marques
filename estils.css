@@ -5,16 +5,16 @@
 header{
     padding: 2em;
     text-align: center;
-    background-color: rgb(300, 0, 0);
+    background-color: rgb(255, 0, 0);
 }
 
 h1{
-    color: #12;
-    font-size: 2x;
+    color: #112233;
+    font-size: 2em;
 }
 
 legend{
-    font-size: bold;
+    font-size: 1.2em;
     font-weight: 700;
     color: brown;
 }
@@ -24,17 +24,18 @@ input{
     padding: 0.5em;
     font-size: 0.8em;
     border-radius: 1em;
-    border: 2xp solid black;
+    border: 2px solid black;
 }
 
 button{
     padding: 0.5em;
     font-size: 1em;
     margin: 0.5em;
-    width: ten%;
+    width: 10%;
     border-radius: 1em;
     border: none;
     color: forestgreen;
     background-color: blueviolet;
     cursor: pointer;
 }
+
