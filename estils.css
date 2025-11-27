@@ -34,8 +34,9 @@ button{
     width: 10%;
     border-radius: 1em;
     border: none;
-    color: forestgreen;
-    background-color: blueviolet;
+    color: #ffffff;
+    background-color: #1a1a1a;
     cursor: pointer;
 }
+
 
