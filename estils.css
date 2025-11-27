@@ -1,20 +1,21 @@
-*{
+*{ 
     font-family: 'Times New Roman', Times, serif;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header{
     padding: 2em;
     text-align: center;
+    background-color: rgb(300, 0, 0);
 }
 
 h1{
-    color: black;
+    color: #12;
+    font-size: 2x;
 }
 
 legend{
-    font-size: large;
-    font-weight: bold;
+    font-size: bold;
+    font-weight: 700;
     color: brown;
 }
 
@@ -23,21 +24,17 @@ input{
     padding: 0.5em;
     font-size: 0.8em;
     border-radius: 1em;
+    border: 2xp solid black;
 }
 
 button{
     padding: 0.5em;
     font-size: 1em;
     margin: 0.5em;
-    width: 10%;
+    width: ten%;
     border-radius: 1em;
     border: none;
     color: forestgreen;
     background-color: blueviolet;
     cursor: pointer;
-}
-
-button:hover{
-    background: aqua;
-    color: rebeccapurple;
 }
